@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Taki-StyleSheet.css" rel="stylesheet" />
+    <script src="JavaScript.js"></script>
+</head>
+<body onload="loadGame()" >
+    <!--div for all the divs-->
+    <div class="container">
+        <!--displaying taki logo, welcome header, and buttons-->
+        <img id="logo" src="images/TAKI_logo.png" />
+        <div><h1>Welcome to Taki Game</h1></div>
+        <div id="resumeGame">
+            <p id="frmStoped">Do you want to resume last game from the place it stoped?</p>
+            <input type="button" class="Gbutton" value="YES" onclick="yesNo(1)" />
+            <input type="button" class="Gbutton" value="NO" onclick="yesNo(0)" />
+        </div>
+        <div id="buttons">
+            <p id="pressDrw">Please press the 'Draw Cards' button in order to draw cards, and then start playing.</p>
+            <input type="button" class="Gbutton" value="Draw Cards" onclick="start(50,false)" />
+            <input type="button" class="Gbutton" value="Start Playing" onclick="game()" />
+        </div>
+        <div id="game">
+            <!--space for displaying messages to the player during the game-->
+            <p id="message"></p>    
+            <div id="Cashier">
+                <p>Cashier</p>
+            </div>
+            <!--space for displaying the table deck-->
+            <div id="Deck">
+                <p>Table Deck</p>
+            </div>
+            <!--space for displaying colors for the player to choose when using color changer card-->
+            <div id="colorChoose"></div>
+            <p id="update_turn">Turn: Player One</p>
+            <!--paragraph is for displaying the chosen color by the PC-->
+            <p id="display_name_color_choosed">Chosen color: </p>
+            <div id="p1">
+                <!--player 1-->
+                <p>Player 1</p>
+            </div>
+            <br />
+            <div id="p2">
+                <!--player 2-->
+                <p>Player 2</p>
+            </div>
+            <div class="players">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
